@@ -1,0 +1,68 @@
+.cockatiel-breath:hover {
+    .ahoge {
+        animation: cockatielAhoge 3s ease-in-out infinite;
+    }
+    .bird-upper-body {
+        animation: cockatielBreathBody 3s ease-in-out infinite;
+    }
+}
+
+.cockatiel-speak:hover {
+    .ahoge {
+        animation: cockatielAhoge 3s ease-in-out infinite;
+    }
+    .bird-upper-body {
+        animation: cockatielBreathBody 3s ease-in-out infinite;
+    }
+    .beak-upper {
+        animation: cockatielSpeakBeak 1s linear forwards 1s;
+    }
+}
+
+.cockatiel-walk:hover {
+    .ahoge {
+        animation: cockatielAhoge 1s linear infinite;
+    }
+    .bird-wing {
+        animation: cockatielWalkWing 1s linear infinite;
+
+        &.back {
+            animation: cockatielWalkWing 1s linear infinite 0.5s;
+        }
+    }
+    .bird-body {
+        animation: cockatielWalkBody 1s linear infinite;
+    }
+    .foot-front {
+        animation: cockatielWalkFeet 0.5s linear infinite;
+    }
+    .foot-back {
+        animation: cockatielWalkFeet 0.5s linear infinite 0.25s;
+    }
+}
+
+.cockatiel-fly:hover {
+    .bird-wing {
+        animation: cockatielFlyWing 0.5s linear infinite 1s;
+
+        &.back {
+            animation: cockatielFlyWing 0.5s linear infinite 1s;
+        }
+    }
+    .bird-body {
+        animation: cockatielFly 1s linear forwards;
+    }
+    .ahoge {
+        animation: cockatielAhoge 1s linear infinite;
+    }
+    .bird-upper-body {
+        animation: cockatielFlyBody 3s linear infinite 1s;
+    }
+    .foot-front {
+        animation: cockatielFlyFeet 0.5s linear forwards 0.5s;
+    }
+    .foot-back {
+        animation: cockatielFlyFeet 0.5s linear forwards 0.5s;
+    }
+}
+

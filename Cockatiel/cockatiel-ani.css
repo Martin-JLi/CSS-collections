@@ -1,0 +1,10 @@
+body {
+    background: #222;
+}
+
+.bird-container {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}

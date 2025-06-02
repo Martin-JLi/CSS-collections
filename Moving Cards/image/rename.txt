@@ -1,0 +1,15 @@
+@echo off
+setlocal enabledelayedexpansion
+
+:: Initialize counter
+set /a count=1
+
+:: Loop through all JPG files in the directory
+for %%F in (*.jpg) do (
+    :: Rename the file
+    ren "%%F" "image-!count!.jpg"
+    set /a count+=1
+)
+
+echo Rename process complete.
+pause

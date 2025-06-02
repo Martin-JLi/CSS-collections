@@ -1,0 +1,127 @@
+:root {
+    --blob-gap: 0.6rem;
+    --blob-size: calc(100%/3 - (var(--blob-gap) * 2/3));
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: #222;
+}
+
+.blob:nth-child(1) img{
+    object-position: center 12%;
+}
+
+.blob:nth-child(2) img{
+    object-position: center 12%;
+}
+
+.blob:nth-child(3) img{
+    object-position: center 30%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blob-container-outer {
+    margin: auto;
+}
+
+.blob-container {
+    width: clamp(300px, 50vmin, 780px);
+    aspect-ratio: 0.75;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--blob-gap);
+}
+
+.blob-container .blob {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in-out;
+    background-color: #eabb53;
+    opacity: 0.8;
+}
+
+.blob-container.cards-v .blob{
+    height: 100%;
+}
+
+.blob-container.cards-h {
+    flex-direction: column;
+}
+
+.blob-container.cards-h .blob {
+    height: var(--blob-size);
+}
+
+.blob-container.animating .blob {
+    width: var(--blob-size);
+    height: var(--blob-size);
+}
+
+.blob-container.animatingSec .blob:first-child {
+    align-self: flex-start;
+}
+
+.blob-container.animatingSec .blob:last-child {
+    align-self: flex-end;
+}
+
+.blob-container:has(.blob:hover):hover .blob:not(:hover) {
+    opacity: 0.5;
+    filter: saturate(0.7) brightness(0.7);
+}
+
+.blob-container:has(.blob:hover):hover .blob:hover {
+    opacity: 1;
+}
+
+.blob-container.cards-v:has(.blob:hover):hover .blob:not(:hover){
+    height: 90%;
+    width: 40%;
+}
+
+.blob-container.cards-v:has(.blob:hover):hover .blob:hover{
+    width: 220%;
+}
+
+.blob-container.cards-h:has(.blob:hover):hover .blob:not(:hover){
+    height: calc(10% - 0.8rem);
+    width: 90%;
+}
+
+.blob-container.cards-h:has(.blob:hover):hover .blob:hover{
+    height: calc(80% - 0.8rem);
+}
+
+.button-container {
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 7vw, 6rem);
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: clamp(1rem, 5vw, 3rem);
+    background-color: transparent;
+    outline-color: transparent;
+    border-radius: 2rem;
+    color: #eabb53;
+}
+
+#cards-v i{
+    rotate: 90deg;
+}
+
+button.active {
+    background-color: #eabb53;
+    color: #222;
+}

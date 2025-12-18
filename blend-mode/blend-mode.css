@@ -1,0 +1,85 @@
+.img-container {
+    margin: auto;
+    position: relative;
+    width: 60vmin;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    overflow: hidden;
+    transform: scale(1);
+    background-color: transparent;
+}
+
+.img-parent, .img-child {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform-origin: center center;
+    margin: auto;
+    width: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.img-child {
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    transition: all 0.2s ease-in 0.5s;
+}
+
+.img-container:hover {
+    .img-parent {
+        width: 0;
+        transition: all 0.2s ease-in 0.5s;
+    }
+    .img-child {
+        width: 100%;
+        transition: all 0.3s ease-out;
+    }
+}
+
+.img-child {
+    mix-blend-mode: multiply;
+} 
+
+.img-container {
+    &:nth-child(1) {
+        .img-child {
+            mix-blend-mode: difference;
+        }
+    }
+
+    &:nth-child(2) {
+        .img-child {
+            mix-blend-mode: darken;
+        }
+    }
+
+    &:nth-child(3) {
+        
+        .img-child {
+            mix-blend-mode: luminosity;
+        }  
+    }
+}
+
+
+
+body {
+    background: url("bg.jpg"); 
+    background-size: cover;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    margin: 12rem 3rem;
+    gap: 1.5rem
+}

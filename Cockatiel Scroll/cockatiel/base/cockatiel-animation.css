@@ -1,0 +1,130 @@
+/***************************************************************
+
+Animation List for Cockatiel:
+
+1.cockatielWalkFeet
+2.cockatielWalkWing
+3.cockatielWalkBody
+4.cockatielFly
+5.cockatielFlyFeet
+6.cockatielFlyWing
+7.cockatielFlyBody
+
+****************************************************************/
+
+/***************************************************************
+Cockatiel Speak Movement
+****************************************************************/
+@keyframes cockatielSpeakBeak {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+/***************************************************************
+Cockatiel Ahoge Movement
+****************************************************************/
+@keyframes cockatielAhoge {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+/***************************************************************
+Cockatiel Breath Movement
+****************************************************************/
+@keyframes cockatielBreathBody {
+    0%, 100% {
+        transform: translateY(0%) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-1%) rotate(-1deg);
+    }
+}
+
+/***************************************************************
+Cockatiel Walk Movement
+****************************************************************/
+@keyframes cockatielWalkFeet {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(45deg);
+    }
+    66% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes cockatielWalkWing {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes cockatielWalkBody {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    75% {
+        transform: rotate(-1deg);
+    }
+}
+
+/***************************************************************
+Cockatiel Fly Movement
+****************************************************************/
+@keyframes cockatielFly {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes cockatielFlyFeet {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-25deg) translate(30%, 30%);
+    }
+}
+
+@keyframes cockatielFlyWing {
+    0%,  100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(100deg) rotateY(20deg);
+    }
+}
+
+@keyframes cockatielFlyBody {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+}

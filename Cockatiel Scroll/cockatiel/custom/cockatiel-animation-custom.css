@@ -1,0 +1,43 @@
+.cockatiel-fly {
+    animation: move 12s linear forwards 1s;
+    animation-play-state: paused;
+
+  .bird-wing {
+    animation: cockatielFlyWing 0.5s linear infinite 1s;
+  }
+
+  .bird-body {
+    animation:  cockatielFly 1s linear forwards;
+  }
+
+  .ahoge {
+    animation: cockatielAhoge 1s linear infinite;
+  }
+
+  .bird-upper-body {
+    animation: cockatielFlyBody 3s linear infinite 1s;
+  }
+
+  .foot-front,
+  .foot-back {
+    animation: cockatielFlyFeet 0.5s linear forwards 0.5s;
+  }
+
+  .bird-wing,
+  .bird-body,
+  .ahoge,
+  .bird-upper-body,
+  .foot-front,
+  .foot-back {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes move {
+    0%, 10%  {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1000px);
+    }
+}

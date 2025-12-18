@@ -1,0 +1,32 @@
+.bird-container {
+    position: absolute;
+    filter: drop-shadow(0 0 1px #000);
+
+    * {
+        transform-box: fill-box;
+    }
+
+    .bird-beak {
+        filter: drop-shadow(0 0 1px #0005);
+    }
+
+    .bird-wing {
+        filter: drop-shadow(0 0 1px #0005);
+    }
+
+    .ahoge {
+        transform-origin: 10% 100%;
+    }
+
+    .beak-upper {
+        transform-origin: 50% 30%;
+    }
+
+    .foot-front {
+        transform-origin: 50% 0%;
+    }
+
+    .foot-back {
+        transform-origin: 50% 0%;
+    }
+}
